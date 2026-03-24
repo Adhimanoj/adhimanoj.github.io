@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta name="google-site-verification" content="4c7XIkyrBw96s7n-5Q4CfudiKuoV073lrogUsf7N-bI" />
@@ -70,6 +70,17 @@
             100% { transform: translateY(0px); }
         }
         .float-anim { animation: float 6s ease-in-out infinite; }
+
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            top: 20px;
+            bottom: 20px;
+            width: 2px;
+            background: linear-gradient(to bottom, transparent, var(--gold), transparent);
+            transform: translateX(-50%);
+            z-index: 5;
+        }
     </style>
 </head>
 <body class="overflow-x-hidden">
@@ -77,10 +88,10 @@
     <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50 glass-card border-none bg-slate-900/80">
         <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
-            <div class="flex items-center space-x-2">
+            <a href="#" onclick="location.reload(); return false;" class="flex items-center space-x-2 cursor-pointer hover:opacity-80 transition">
                 <span class="text-2xl font-brand font-bold gold-gradient-text">VOXEON</span>
                 <span class="text-xs tracking-widest text-slate-400 font-bold uppercase pt-1">Labs</span>
-            </div>
+            </a>
             <div class="hidden md:flex space-x-8 text-sm font-semibold tracking-wide">
                 <a href="#home" class="nav-link">HOME</a>
                 <a href="#services" class="nav-link">SERVICES</a>
@@ -168,6 +179,58 @@
             </div>
         </div>
     </section>
+    <!-- Achievements Section -->
+    <section id="achievements" class="py-24 px-6 bg-slate-900 relative">
+        <div class="max-w-7xl mx-auto">
+            <diav class="text-center mb-20">
+                <h2 class="text-4xl font-brand mb-4">MILESTONES & <span class="text-yellow-500">ACHIEVEMENTS</span></h2>
+                <p clss="text-slate-400">Tracking our journey from a campus idea to a recognized tech lab.</p>
+            </div>
+
+            <div class="relative">
+                <div class="timeline-line"></div>
+                
+                <!-- Achievement 1 -->
+                <div class="flex flex-col md:flex-row items-center mb-16 relative">
+                    <div class="md:w-1/2 md:pr-12 md:text-right mb-8 md:mb-0">
+                        <div class="glass-card p-6 rounded-2xl inline-block text-left max-w-md">
+                            <span class="text-yellow-500 font-bold text-sm tracking-tighter">MARCH 2026</span>
+                            <h4 class="text-xl font-bold mt-1">Early Presentation</h4>
+                            <p class="text-slate-400 text-sm mt-2">An early presentation of the VisionAttend AI concept at IEDC ideathon was done.</p>
+                        </div>
+                    </div>
+                    <div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-yellow-500 rounded-full border-4 border-slate-900 z-10 hidden md:block"></div>
+                    <div class="md:w-1/2 md:pl-12"></div>
+                </div>
+
+                <!-- Achievement 2 -->
+                <div class="flex flex-col md:flex-row items-center mb-16 relative">
+                    <div class="md:w-1/2 md:pr-12"></div>
+                    <div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-yellow-500 rounded-full border-4 border-slate-900 z-10 hidden md:block"></div>
+                    <div class="md:w-1/2 md:pl-12">
+                        <div class="glass-card p-6 rounded-2xl inline-block text-left max-w-md">
+                            <span class="text-yellow-500 font-bold text-sm tracking-tighter">MARCH 2026</span>
+                            <h4 class="text-xl font-bold mt-1">Lab Inauguration</h4>
+                            <p class="text-slate-400 text-sm mt-2">Officially established at Thejus Engineering College under the TIC,CSE Department, starting with a core team.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Achievement 3 -->
+                <div class="flex flex-col md:flex-row items-center relative">
+                    <div class="md:w-1/2 md:pr-12 md:text-right mb-8 md:mb-0">
+                        <div class="glass-card p-6 rounded-2xl inline-block text-left max-w-md">
+                            <span class="text-yellow-500 font-bold text-sm tracking-tighter">PRESENT</span>
+                            <h4 class="text-xl font-bold mt-1">Live Deployment</h4>
+                            <p class="text-slate-400 text-sm mt-2">Currently working on 3 projects which showcase the capabilities of Voxeon Labs.</p>
+                        </div>
+                    </div>
+                    <div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-yellow-500 rounded-full border-4 border-slate-900 z-10 hidden md:block"></div>
+                    <div class="md:w-1/2 md:pl-12"></div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- VisionAttend AI Spotlight -->
     <section id="visionattend" class="py-24 px-6 relative overflow-hidden">
@@ -222,7 +285,39 @@
             </div>
         </div>
     </section>
-
+<!-- Future Expansion -->
+    <section id="expansion" class="py-24 px-6 bg-slate-900 border-t border-white/5">
+        <div class="max-w-7xl mx-auto text-center mb-16">
+            <h2 class="text-4xl font-brand mb-4 uppercase">FUTURE <span class="text-yellow-500">HORIZONS</span></h2>
+            <p class="text-slate-400">Scaling beyond the campus limits into global industry solutions.</p>
+        </div>
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Expansion 1 -->
+            <div class="p-8 rounded-3xl border border-white/5 bg-slate-950/50 hover:bg-yellow-500/5 transition group">
+                <h4 class="text-yellow-500 font-bold mb-4 tracking-widest text-xs uppercase">Phase 01</h4>
+                <h3 class="text-xl font-bold mb-4 group-hover:text-yellow-500 transition">Voxeon Cloud</h3>
+                <p class="text-slate-400 text-sm">Developing a localized cloud storage solution specifically for academic research data sharing.</p>
+            </div>
+            <!-- Expansion 2 -->
+            <div class="p-8 rounded-3xl border border-white/5 bg-slate-950/50 hover:bg-yellow-500/5 transition group">
+                <h4 class="text-yellow-500 font-bold mb-4 tracking-widest text-xs uppercase">Phase 02</h4>
+                <h3 class="text-xl font-bold mb-4 group-hover:text-yellow-500 transition">IoT Integration</h3>
+                <p class="text-slate-400 text-sm">Expanding VisionAttend into hardware controllers for physical access gates and smart lab locks.</p>
+            </div>
+            <!-- Expansion 3 -->
+            <div class="p-8 rounded-3xl border border-white/5 bg-slate-950/50 hover:bg-yellow-500/5 transition group">
+                <h4 class="text-yellow-500 font-bold mb-4 tracking-widest text-xs uppercase">Phase 03</h4>
+                <h3 class="text-xl font-bold mb-4 group-hover:text-yellow-500 transition">Incubation Hub</h3>
+                <p class="text-slate-400 text-sm">Transforming the lab into a full-scale startup incubator for junior engineering batches.</p>
+            </div>
+            <!-- Expansion 4 -->
+            <div class="p-8 rounded-3xl border border-white/5 bg-slate-950/50 hover:bg-yellow-500/5 transition group">
+                <h4 class="text-yellow-500 font-bold mb-4 tracking-widest text-xs uppercase">Phase 04</h4>
+                <h3 class="text-xl font-bold mb-4 group-hover:text-yellow-500 transition">AI Open Source</h3>
+                <p class="text-slate-400 text-sm">Releasing the core recognition libraries to the global developer community via GitHub.</p>
+            </div>
+        </div>
+    </section>
     <!-- Footer / Contact -->
     <footer id="contact" class="py-24 px-6 bg-[#0a0f1d] border-t border-white/5">
         <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12">
@@ -245,11 +340,11 @@
                 <ul class="space-y-4 text-slate-400">
                     <li class="flex items-center space-x-3">
                         <i class="fa-solid fa-envelope text-xs"></i>
-                        <span>voxeonlabs@gmail.com</span>
+                        <span><a href="mailto:voxeonlabs@gmail.com" class="text-slate-400 hover:text-yellow-500 transition">voxeonlabs@gmail.com</a></span>
                     </li>
                     <li class="flex items-center space-x-3">
                         <i class="fa-solid fa-location-dot text-xs"></i>
-                        <span><br>Thejus Engineering College, Vellarkkad, Thrissur, Kerala.<br>Room No:342 Second Floor,Main Building</span>
+                        <span><br><a href="https://maps.app.goo.gl/zD6RqUZAtHvh5KnAA" target="_blank" class="text-slate-400 hover:text-yellow-500 transition">Thejus Engineering College, Vellarkkad, Thrissur, Kerala.</a><br>Room No:342 Second Floor,Main Building</span>
                     </li>
                 </ul>
             </div>
